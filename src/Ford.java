@@ -12,8 +12,8 @@ public class Ford extends Car{
     {
         //From sale price computed from car class, subtract the manufacturerDiscount
         //super.computeSalePrice(super.regularPrice);
-        double temp = super.computeSalePrice(super.regularPrice);
-        this.salePrice = temp - this.manufacturerDiscount;
+        //double temp = super.computeSalePrice(super.regularPrice);
+        //this.salePrice = temp - this.manufacturerDiscount;
     }
 
     public int getYear() {
