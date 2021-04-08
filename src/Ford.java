@@ -2,17 +2,18 @@ public class Ford extends Car{
     protected int year;
     protected int manufacturerDiscount;
 
-    public Ford(int speed, double regularPrice, String color, double getSalePrice, int year, int manufacturerDiscount) {
-        super(speed, regularPrice, color, getSalePrice);
+    public Ford(int speed, double regularPrice, String color, int year, int manufacturerDiscount) {
+        super(speed, regularPrice, color);
         this.year = year;
         this.manufacturerDiscount = manufacturerDiscount;
     }
 
-    double getSalePrice()
+    public void computeSalePrice()
     {
         //From sale price computed from car class, subtract the manufacturerDiscount
-        super.setGetSalePrice(super.getSalePrice - this.manufacturerDiscount);
-        return super.getSalePrice;
+        //super.computeSalePrice(super.regularPrice);
+        double temp = super.computeSalePrice(super.regularPrice);
+        this.salePrice = temp - this.manufacturerDiscount;
     }
 
     public int getYear() {

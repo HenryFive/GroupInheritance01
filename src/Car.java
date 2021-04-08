@@ -2,7 +2,7 @@ public class Car {
     int speed;
     double regularPrice;
     String color;
-    double getSalePrice;
+    double salePrice;
 
     public int getSpeed() {
         return speed;
@@ -28,18 +28,17 @@ public class Car {
         this.color = color;
     }
 
-    public void setGetSalePrice(double getSalePrice) {
-        this.getSalePrice = getSalePrice;
+    public double computeSalePrice(double regularPrice) {
+        return regularPrice * 0.99;
     }
 
-    public Car(int speed, double regularPrice, String color, double getSalePrice) {
+    public Car(int speed, double regularPrice, String color) {
         this.speed = speed;
         this.regularPrice = regularPrice;
         this.color = color;
-        this.getSalePrice = getSalePrice;
     }
 
-    double getGetSalePrice() {
-        return getSalePrice;
+    double getsalePrice() {
+        return salePrice;
     }
 }
