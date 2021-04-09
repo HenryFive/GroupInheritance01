@@ -24,7 +24,7 @@ public class Car {
         this.speed = speed;
         this.regularPrice = regularPrice;
         this.color = color;
-        getSalePrice();
+        this.getSalePrice();
 
     }
 

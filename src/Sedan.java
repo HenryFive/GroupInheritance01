@@ -3,14 +3,10 @@ public class Sedan extends Car{
     public Sedan(int speed, double regularPrice, String color, int length) {
         super(speed, regularPrice, color);
         this.length = length;
-        this.getSalePrice();
+        this.getSalePriceSedan();
     }
 
-    //override the getSalePrice method and call it when constructing this class
-    //this allows the computation to happen automatically without calling the class
-
-    double getSalePrice() {
-        super.getSalePrice(); // still need to call the parent getSalePrice since it still needs to calculate from parent class
+    double getSalePriceSedan() {
 
         if (length > 20) {
             super.salePrice *= 0.05;

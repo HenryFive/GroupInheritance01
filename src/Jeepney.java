@@ -4,15 +4,10 @@ public class Jeepney extends Car{
     public Jeepney(int speed, double regularPrice, String color, int weight) {
         super(speed, regularPrice, color);
         this.weight = weight;
-
-        this.getSalePrice();
+        this.getSalePriceJeepney();
     }
 
-    //override the getSalePrice method and call it when constructing this class
-    //this allows the computation to happen automatically without calling the class
-
-    double getSalePrice(){
-        super.getSalePrice(); // still need to call the parent getSalePrice since it still needs to calculate from parent class
+    double getSalePriceJeepney(){
 
         if (weight > 2000){
             super.salePrice *= 0.10;
