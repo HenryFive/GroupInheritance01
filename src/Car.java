@@ -4,14 +4,6 @@ public class Car {
     String color;
     double salePrice;
 
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
     public double getRegularPrice() {
         return regularPrice;
     }
@@ -20,25 +12,25 @@ public class Car {
         this.regularPrice = regularPrice;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public double computeSalePrice(double regularPrice) {
+    //removed setters and getters since they are not used
+    //removed method to calculate price since redundant
+/*
+        public double computeSalePrice(double regularPrice) {
         return regularPrice * 0.99;
     }
+*/
 
     public Car(int speed, double regularPrice, String color) {
         this.speed = speed;
         this.regularPrice = regularPrice;
         this.color = color;
+        getSalePrice();
+
     }
 
-    double getsalePrice() {
-        return salePrice;
+    //not a getter but a method to calculate sale price
+    double getSalePrice() {
+        salePrice = regularPrice * 0.99;
+        return 0;
     }
 }

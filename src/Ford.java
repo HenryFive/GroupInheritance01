@@ -6,29 +6,21 @@ public class Ford extends Car{
         super(speed, regularPrice, color);
         this.year = year;
         this.manufacturerDiscount = manufacturerDiscount;
+        this.getSalePrice();
+
     }
 
-    public void computeSalePrice()
+    //removed getters and setters
+    //override the getSalePrice method and call it when constructing this class
+    //this allows the computation to happen automatically without calling the class
+
+    double getSalePrice()
     {
-        //From sale price computed from car class, subtract the manufacturerDiscount
-        //super.computeSalePrice(super.regularPrice);
-        //double temp = super.computeSalePrice(super.regularPrice);
-        //this.salePrice = temp - this.manufacturerDiscount;
-    }
+        super.getSalePrice(); // still need to call the parent getSalePrice since it still needs to calculate from parent class
+        super.salePrice -= manufacturerDiscount;
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getManufacturerDiscount() {
-        return manufacturerDiscount;
-    }
-
-    public void setManufacturerDiscount(int manufacturerDiscount) {
-        this.manufacturerDiscount = manufacturerDiscount;
+        //will return zero since the price is already calculated and is store in the variable
+        //will retain the double return data type since it is required in the exercise requirements
+        return 0;
     }
 }
